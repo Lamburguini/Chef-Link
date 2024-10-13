@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro do usuário</title>
+</head>
+<body>
+    <h1>Cadastro do usuário</h1>
+
+    <form action="cadastro.php" method="post">
+        <label for="nome">Nome:</label><br>
+        <input type="text" name="nome" id="nome" autofocus><br>
+
+        <label for="sobrenome">Sobrenome:</label><br>
+        <input type="text" name="sobrenome" id="sobrenome"><br>
+
+        <hr>
+
+        Nome de usuário: <input type="text" name="usuario" placeholder="Nome de usuário">
+        Senha: <input type="password" name="senha" placeholder="Senha" required>
+        Confirme a Senha: <input type="password" name="confirma_senha" id="confirma_senha" placeholder="Confirme a Senha" required>
+        E-mail: <input type="email" name="email" placeholder="email@gmail.com">
+        Data de nascimento: <input type="date" name="Nascimento">
+        
+        <label for="genero">Gênero:</label>
+        <input type="text" id="genero" name="genero" placeholder="Informe seu gênero">
+        
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+</html>

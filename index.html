@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chef Link</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: #fff;
+            position: relative; /* Para posicionar elementos com relação ao body */
+        }
+        
+        .logo {
+            margin-top: 20px;
+            width: 150px;
+            opacity: 0.8; /* Transparência na logo */
+        }
+
+        h1 {
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .button-container {
+            margin-top: 20px;
+            display: flex;
+            gap: 20px;
+        }
+
+        .button {
+            background-color: #006400;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        .button:hover {
+            background-color: #004d00;
+        }
+
+        .carrinho {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: 40px;
+        }
+
+        /* Estilo para o botão de ajuda (?) */
+        .help-button {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: #28a745; /* Cor verde */
+            border: none;
+            border-radius: 5px;
+            padding: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            color: white; /* Cor do texto */
+        }
+
+        /* Estilo para o menu de hambúrguer */
+        .menu {
+            position: absolute;
+            top: 10px;
+            left: 60px; /* Distância do botão de ajuda */
+            width: 40px;
+        }
+
+        /* Estilo para a caixa de informações sobre o Chef Link */
+        .info {
+            display: none; /* Inicialmente escondido */
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            text-align: center;
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Logo do site -->
+    <img src="../images/logo.png" alt="Logo do Chef Link" class="logo">
+
+    <h1>Bem-vindo ao Chef Link!</h1>
+    <p>Explore os melhores produtos das nossas lojas.</p>
+
+    <!-- Botões para entrar como visitante ou cadastrar loja -->
+    <div class="button-container">
+        <button id="entrarVisitante" class="button">Entrar como Visitante</button>
+        <button id="cadastrarLoja" class="button">Cadastrar como Loja</button>
+    </div>
+
+    <!-- Carrinho de compras -->
+    <img src="../images/cart.jpg" alt="Carrinho de Compras" class="carrinho">
+
+    <!-- Botão de ajuda (?) -->
+    <button class="help-button" onclick="toggleInfo()">?</button>
+    
+    <!-- Menu de hambúrguer -->
+    <img src="../images/menu-icon.png" alt="Menu" class="menu" onclick="alert('Menu ainda não definido')">
+
+    <!-- Caixa de informações sobre o Chef Link -->
+    <div class="info" id="infoBox">
+        <p>Chef Link é uma plataforma que conecta lojas de alimentos a clientes, facilitando a compra de produtos de qualidade!</p>
+    </div>
+
+    <script>
+        // Funções para redirecionar ao clicar nos botões
+        document.getElementById("entrarVisitante").addEventListener("click", function() {
+            window.location.href = "visitante.html"; // Substitua pelo caminho correto
+        });
+
+        document.getElementById("cadastrarLoja").addEventListener("click", function() {
+            window.location.href = "cadastro_loja.html"; // Substitua pelo caminho correto
+        });
+
+        // Função para mostrar/ocultar informações sobre o Chef Link
+        function toggleInfo() {
+            const infoBox = document.getElementById("infoBox");
+            infoBox.style.display = infoBox.style.display === "none" || infoBox.style.display === "" ? "block" : "none";
+        }
+    </script>
+
+</body>
+</html>
