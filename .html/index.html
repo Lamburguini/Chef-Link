@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chef Link</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: #fff;
+            position: relative; /* Para posicionar elementos com relação ao body */
+        }
+        
+        .logo {
+            margin-top: 20px;
+            width: 150px;
+            opacity: 0.8; /* Transparência na logo */
+        }
+
+        h1 {
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .button-container {
+            margin-top: 20px;
+            display: flex;
+            gap: 20px;
+        }
+
+        .button {
+            background-color: #006400;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        .button:hover {
+            background-color: #004d00;
+        }
+
+        .carrinho {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: 40px;
+        }
+
+        /* Estilo para o menu de hambúrguer */
+        .menu-container {
+            position: absolute;
+            top: 10px;
+            left: 10px; /* Distância do canto */
+            display: flex;
+            align-items: center; /* Alinha verticalmente */
+        }
+
+        .menu {
+            width: 40px;
+            height: 40px; /* Tamanho da imagem do menu */
+            margin-left: 10px; /* Espaço entre a imagem e o menu */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Logo do site -->
+    <img src="../images/logo.png" alt="Logo do Chef Link" class="logo">
+
+    <h1>Bem-vindo ao Chef Link!</h1>
+    <p>Explore os melhores produtos das nossas lojas.</p>
+
+    <!-- Botões para entrar como visitante ou cadastrar loja -->
+    <div class="button-container">
+        <button id="entrarVisitante" class="button">Entrar como Visitante</button>
+        <button id="cadastrarLoja" class="button">Cadastrar como Loja</button>
+    </div>
+
+    <!-- Carrinho de compras -->
+    <img src="../images/cart.jpg" alt="Carrinho de Compras" class="carrinho" style="width: 50px; height: 100px;">
+
+    <!-- Menu de hambúrguer e imagem -->
+    <div class="menu-container">
+        <img src="../images/menu.svg" alt="Menu" class="menu" style="width: 110px; height: 150px;">
+        <!-- Adicione aqui a imagem ao lado do menu se necessário -->
+    </div>
+
+    <script>
+        // Funções para redirecionar ao clicar nos botões
+        document.getElementById("entrarVisitante").addEventListener("click", function() {
+            window.location.href = "visitante.html"; // Substitua pelo caminho correto
+        });
+
+        document.getElementById("cadastrarLoja").addEventListener("click", function() {
+            window.location.href = "cadastro_loja.html"; // Substitua pelo caminho correto
+        });
+    </script>
+
+</body>
+</html>
